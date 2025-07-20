@@ -2,8 +2,10 @@ from django.contrib import admin
 from django.urls import path
 
 from shop.views import MainPage, CustomLoginView, RegisterView, logout_view
-from django.contrib.auth.views import LogoutView
-from django.contrib.auth import logout
+from shop.models import Instrument, Category
+
+admin.site.register(Instrument)
+admin.site.register(Category)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
