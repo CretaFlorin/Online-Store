@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'admin_panel',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +154,5 @@ LOGGING = {
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'login'
+
+AUTH_USER_MODEL = 'users.User'
